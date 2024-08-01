@@ -1,0 +1,118 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* خلفية داكنة */
+    color: #e0e0e0; /* نص فاتح */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1f1f1f; /* خلفية الترويسة أغمق قليلاً */
+    padding: 20px 40px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    color: #ff7043; /* لون العنوان */
+    font-size: 2em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff7043;
+}
+
+#hero {
+    background: linear-gradient(135deg, #ff7043, #e64a19); /* تدرج لوني محدث */
+    padding: 80px 20px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+#hero h2 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #fff;
+    color: #ff7043;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.4s, color 0.4s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff7043;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+#features {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #1c1c1c;
+}
+
+#features h3 {
+    color: #ff7043;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature-item {
+    background-color: #292929;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+#about {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #212121;
+}
+
+footer {
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 20px 40px;
+    color: #e0e0e0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}

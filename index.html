@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع العقرب لاستضافة بوتات GitHub</title>
+    <link rel="stylesheet" href="styles.css"> <!-- رابط لملف CSS -->
+</head>
+<body>
+    <header>
+        <h1>موقع العقرب اليوتيوبر</h1>
+        <nav>
+            <ul>
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#features">الخدمات</a></li>
+                <li><a href="#about">عن الموقع</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>استضافة بوتات GitHub 24/7</h2>
+        <p>تشغيل بوتاتك على مدار الساعة بدون توقف.</p>
+        <a href="#deploy-form" class="cta-button">ابدأ الآن</a>
+    </section>
+
+    <section id="features">
+        <h3>مميزات الخدمة</h3>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h4>تشغيل مستمر</h4>
+                <p>بوتاتك تعمل بلا توقف على مدار الساعة.</p>
+            </div>
+            <div class="feature-item">
+                <h4>إعداد سهل</h4>
+                <p>استضافة بوتاتك من GitHub بسرعة وسهولة.</p>
+            </div>
+            <div class="feature-item">
+                <h4>دعم فني</h4>
+                <p>فريق دعم متاح على مدار الساعة.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h3>عن الموقع</h3>
+        <p>نحن نقدم حلول استضافة بوتات GitHub مع ضمان أداء عالي وأمان ممتاز، بتصميم قوي وعصري.</p>
+
+    <footer id="contact">
+        <p>&copy; 2024 العقرب اليوتيوبر - جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script>
+        document.getElementById('bot-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const repoUrl = document.getElementById('repoUrl').value;
+
+            const response = await fetch('/deploy-bot', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ repoUrl })
+            });
+
+            const result = await response.json();
+            document.getElementById('response').innerText = result.message || result.error;
+        });
+    </script>
+</body>
+</html>
